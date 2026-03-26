@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-100">
+
+<header class="fixed top-0 left-0 w-full z-50 bg-black/60 backdrop-blur-md shadow-lg">
+    <nav class="flex items-center justify-between px-6 py-4">
+
+        <!-- Logo -->
+        <div class="text-white text-2xl font-bold tracking-wide uppercase">
+            TailWind CSS
+        </div>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex items-center gap-8 text-white font-medium">
+            <li><a href="" class="hover:text-yellow-400 duration-300">Home</a></li>
+            <li><a href="" class="hover:text-yellow-400 duration-300">Docs</a></li>
+            <li><a href="" class="hover:text-yellow-400 duration-300">About</a></li>
+            <li><a href="" class="hover:text-yellow-400 duration-300">Contact</a></li>
+            <li>
+                <a href="" class="bg-yellow-400 text-black px-5 py-2 rounded-full font-semibold hover:bg-white duration-300">
+                    Login
+                </a>
+            </li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-white text-2xl">
+            ☰
+        </button>
+
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-black/80 text-white">
+        <ul class="flex flex-col items-center gap-6 py-6">
+            <li><a href="" class="hover:text-yellow-400 duration-300">Home</a></li>
+            <li><a href="" class="hover:text-yellow-400 duration-300">Docs</a></li>
+            <li><a href="" class="hover:text-yellow-400 duration-300">About</a></li>
+            <li><a href="" class="hover:text-yellow-400 duration-300">Contact</a></li>
+            <li>
+                <a href="" class="bg-yellow-400 text-black px-5 py-2 rounded-full font-semibold hover:bg-white duration-300">
+                    Login
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</header>
+
+<script>
+const menuBtn = document.getElementById("menu-btn");
+const mobileMenu = document.getElementById("mobile-menu");
+
+menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+});
+</script>
+
+</body>
+</html>
